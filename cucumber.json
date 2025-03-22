@@ -3,7 +3,7 @@
       "timeout": 60000,
       "dryrun": false,
       "requireModule": ["ts-node/register"],
-      "paths": ["src/test/features/**/loginPage.feature"],
+      "paths": ["src/test/features/**/*.feature"],
       "require": ["src/test/steps/**/*.ts", "src/hooks/hooks.ts"],
       "format": [
         "progress-bar",
