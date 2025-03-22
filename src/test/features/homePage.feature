@@ -1,10 +1,10 @@
 Feature: Verify Home Page features
 
   Background:
-    Given I navigate to "https://equipmentshare-us-7fcd6ee2fbc58ac5b15ef.webflow.io/rent"
+    Given I navigate to the home page
 
   Scenario: Verify web application loading
-    Then I should see the page title as "Equipment Rental | EquipmentShare - A Better Way To Rent"
+    Then I should see the page title as "EquipmentShare | Build With Control"
     And I should see the User button
     And I should see the Cart button
 

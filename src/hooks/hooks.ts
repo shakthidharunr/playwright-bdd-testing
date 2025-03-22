@@ -12,6 +12,19 @@ Before(async function () {
 });
 
 After(async function () {
-    await pageFixture.page.close();
-    await browser.close();
+    try {
+        if (pageFixture.page) {
+            await pageFixture.page.close();
+        }
+    } catch (error) {
+        console.error('Error closing the page:', error);
+    }
+
+    try {
+        if (browser) {
+            await browser.close();
+        }
+    } catch (error) {
+        console.error('Error closing the browser:', error);
+    }
 });

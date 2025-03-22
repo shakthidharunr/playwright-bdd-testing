@@ -2,13 +2,12 @@ import { Given, When, Then } from '@cucumber/cucumber';
 import { expect } from '@playwright/test';
 import { HomePage } from '../page_classes/home_page';
 import { pageFixture } from '../../hooks/pageFixture';
-import { LoginPage } from '../page_classes/login_page';
 
 let homePage: HomePage;
 
-Given('I navigate to {string}', { timeout: 60000 }, async (url: string) => {
-    await pageFixture.page.goto(url);
-    homePage = new HomePage(); // Initialize HomepageFixture object here
+Given('I navigate to the home page', { timeout: 60000 }, async () => {
+    await pageFixture.page.goto('https://equipmentshare-us-7fcd6ee2fbc58ac5b15ef.webflow.io');
+    homePage = new HomePage();
 });
 
 Then('I should see the User button', async () => {
@@ -21,7 +20,7 @@ Then('I should see the Cart button', async () => {
     expect(cartButton).toBeVisible();
 });
 
-When('I click on the User button', { timeout: 60000 }, async function () {
+When('I click on the User button', async function () {
     const userButton = await homePage.getUserButton();
     userButton ? await userButton.click() : console.log('User button not found');
 });

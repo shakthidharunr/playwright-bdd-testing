@@ -3,7 +3,6 @@ import { expect } from '@playwright/test';
 import { LoginPage } from '../page_classes/login_page';
 import { pageFixture } from '../../hooks/pageFixture';
 
-
 let loginPage: LoginPage
 
 Then('I should be navigated to the Login page', { timeout: 10000 }, async function () {
