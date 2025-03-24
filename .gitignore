@@ -8,4 +8,5 @@
 /reports/
 @rerun.txt
 @retry.txt
-.github/
+.github/\
+/log/
