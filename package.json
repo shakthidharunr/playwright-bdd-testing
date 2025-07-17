@@ -3,11 +3,18 @@
     "@cucumber/cucumber": "^11.2.0",
     "@playwright/test": "^1.51.1",
     "@types/node": "^22.13.11",
+    "cross-env": "^7.0.3",
     "playwright": "^1.51.1",
+    "playwright-bdd": "^8.3.1",
     "ts-node": "^10.9.2"
   },
   "scripts": {
-  "generate": "bddgen",
-  "test": "npm run generate && playwright test"
+    "generate": "npx bddgen",
+    "test": "npm run generate && playwright test",
+    "test:local": "cross-env TARGET=local npm test",
+    "test:bs": "cross-env TARGET=bs npm test"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.0"
   }
 }
