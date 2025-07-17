@@ -1,6 +1,3 @@
-// This file contains BrowserStack-specific configuration settings.
-// It is used for setting up BrowserStack credentials and capabilities.
-
 export const config = {
     user: process.env.BROWSERSTACK_USERNAME,
     key: process.env.BROWSERSTACK_ACCESS_KEY,
