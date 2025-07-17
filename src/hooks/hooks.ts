@@ -8,7 +8,7 @@ let browser: Browser;
 Before(async function () {
     browser = await chromium.launch({ headless: false, channel: 'chrome' });
     page = await browser.newPage();
-    pageFixture.page = page;
+    pageFixture.page = page as any;
 });
 
 After(async function () {
