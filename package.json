@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "@cucumber/cucumber": "^11.2.0",
+    "@cucumber/cucumber": "^12.2.0",
     "@playwright/test": "^1.51.1",
     "@types/node": "^22.13.11",
     "cross-env": "^7.0.3",
